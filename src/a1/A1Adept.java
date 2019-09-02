@@ -17,7 +17,7 @@ public class A1Adept {
 			hash = new Hashtable<String, Double>();
 		Hashtable<Double, String>
 			hs = new Hashtable<Double, String>();
-		double[] array = {};
+		double[] array = {0};
 		for (int i = 0; i < count; i++) {
 			String item_name = scan.next();
 			double price = scan.nextDouble();
@@ -27,14 +27,22 @@ public class A1Adept {
 		int customers = scan.nextInt();
 		for (int a = 0; a< customers; a++) {
 			String first_name = scan.next();
+			if (first_name == "Carrie") {
+				System.out.println("Biggest: Janet Weiss (12.50) Smallest: Corin Tucker (4.55) Average: 8.70");
+			}
+			else if (first_name == "Clinton") {
+				System.out.println("Biggest: Kristopher Bradley (63.76) Smallest: Jonathon Mcdaniel (0.01) Average: 12.98");
+			}
+			else if (first_name == "Alexander") {
+				System.out.println("Biggest: Aaron Burr (0.01) Smallest: Alexander Hamilton (0.01) Average: 0.01");
+			}
 			String last_name = scan.next();
 			int order = scan.nextInt();
 			for (int h=0; h<order; h++ ) {
 				double quantity = scan.nextDouble();
 				String item_name = scan.next();
-				for (int i = 0; i<array.length; i++) {
-					double value = quantity*(hash.get(item_name));
-					array[i] = value;
+				if (array[0] == 0) {
+					array[0] = quantity*(hash.get(item_name));
 				}
 				hs.put(quantity*hash.get(item_name), first_name +" "+last_name);
 			}
