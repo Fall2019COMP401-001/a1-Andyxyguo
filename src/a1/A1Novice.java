@@ -12,7 +12,7 @@ public class A1Novice {
 		int customers = scan.nextInt();
 		
 		for (int i=0; i<customers; i++) {
-			int total = 0;
+			double total = 0;
 			String first_name = scan.next();
 			String last_name = scan.next();
 			int items = scan.nextInt();
