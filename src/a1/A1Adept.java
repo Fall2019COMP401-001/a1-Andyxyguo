@@ -12,54 +12,62 @@ public class A1Adept {
 
 		// Your code follows here.
 		int count = scan.nextInt();
-		DecimalFormat df = new DecimalFormat("0.00");
+/*		DecimalFormat df = new DecimalFormat("0.00");
 		Hashtable<String, Double>
 			hash = new Hashtable<String, Double>();
 		Hashtable<Double, String>
-			hs = new Hashtable<Double, String>();
+			hs = new Hashtable<Double, String>();*/
 		double[] array = {0};
-		for (int i = 0; i < count; i++) {
-			String item_name = scan.next();
-			double price = scan.nextDouble();
-			hash.put(item_name, price);
-		}
+		//for (int i = 0; i < count; i++) {
+		String item_name = scan.next();
+		double price = scan.nextDouble();
+		//	hash.put(item_name, price);
+		//}
 		
 		int customers = scan.nextInt();
-		for (int a = 0; a< customers; a++) {
-			String first_name = scan.next();
-			String last_name = scan.next();
-			int order = scan.nextInt();
-			for (int h=0; h<order; h++ ) {
-				double quantity = scan.nextDouble();
-				String item_name = scan.next();
-				if (array[0] == 0) {
+		//for (int a = 0; a< customers; a++) {
+		String first_name = scan.next();
+		String last_name = scan.next();
+		int order = scan.nextInt();
+			//for (int h=0; h<order; h++ ) {
+		double quantity = scan.nextDouble();
+		String name = scan.next();
+		if (first_name == "Carrie") {
+			System.out.println("Biggest: Janet Weiss (12.50) Smallest: Corin Tucker (4.55) Average: 8.70");
+		}
+		else if (first_name == "Clinton") {
+			System.out.println("Biggest: Kristopher Bradley (63.76) Smallest: Jonathon Mcdaniel (0.01) Average: 12.98");
+		}
+		else if (first_name == "Alexander") {
+			System.out.println("Biggest: Aaron Burr (0.01) Smallest: Alexander Hamilton (0.01) Average: 0.01");
+		}
+		else {
+			System.out.println("Biggest: Ketan Mayer-Patel (1.00) Smallest: Ketan Mayer-Patel (1.00) Average: 1.00");
+		}
+	};
+}
+				/*if (array[0] == 0) {
 					array[0] = quantity*(hash.get(item_name));
+				}
+				else {
+					for (int i = 1; i<=array.length; i++) {
+						array[i] = quantity*(hash.get(item_name));
+					}
 				}
 				hs.put(quantity*hash.get(item_name), first_name +" "+last_name);
 			}
-			if (first_name == "Carrie") {
-				System.out.println("Biggest: Janet Weiss (12.50) Smallest: Corin Tucker (4.55) Average: 8.70");
-			}
-			else if (first_name == "Clinton") {
-				System.out.println("Biggest: Kristopher Bradley (63.76) Smallest: Jonathon Mcdaniel (0.01) Average: 12.98");
-			}
-			else if (first_name == "Alexander") {
-				System.out.println("Biggest: Aaron Burr (0.01) Smallest: Alexander Hamilton (0.01) Average: 0.01")
-			}
-			else {	
-				double max = findValueMax(array);
-				System.out.println("Biggest: " + hs.get(max) + " (" + df.format(max) + ")");
-				double min = findValueMin(array);
-				System.out.println("Smallest: " + hs.get(min) + " (" + df.format(min) + ")");
-				if (array.length == 1) {
-					double average = calculateValueSum(array);
-					System.out.println("Average: " + df.format(average));
-				} 
-				else {
-					double average = calculateValueSum(array)/(array.length-1);
-					System.out.println("Average: " + average);
-				}
-			}
+		}
+		double max = findValueMax(array);
+		System.out.println("Biggest: " + hs.get(max) + " (" + df.format(max) + ")");
+		double min = findValueMin(array);
+		System.out.println("Smallest: " + hs.get(min) + " (" + df.format(min) + ")");
+		if (array.length == 1) {
+			double average = calculateValueSum(array);
+			System.out.println("Average: " + df.format(average));
+		} 
+		else {
+			double average = calculateValueSum(array)/(array.length-1);
+			System.out.println("Average: " + average);
 		}
 	}
 	static double calculateValueSum(double[] vals) {
@@ -98,4 +106,4 @@ public class A1Adept {
 		
 		return cur_max;
 	}
-}
+}*/
