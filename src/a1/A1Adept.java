@@ -38,7 +38,7 @@ public class A1Adept {
 				else {
 					for (int i = 0; i<array.length; i++) {
 						double value = quantity*(hash.get(item_name));
-						array[i] = value;
+						array[i+1] = value;
 					}
 				}
 				hs.put(quantity*hash.get(item_name), first_name +" "+last_name);
