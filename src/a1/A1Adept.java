@@ -38,7 +38,7 @@ public class A1Adept {
 			}
 			array.add(total);
 			hs.put(total, first_name +" "+last_name);
-		}
+		};
 
 
 
