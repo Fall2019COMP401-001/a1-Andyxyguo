@@ -15,13 +15,13 @@ public class A1Novice {
 		for (int i=0; i<customers; i++) {
 			double total = 0;
 			DecimalFormat df = new DecimalFormat("#.00");
-			String first_name = scan.nextLine();
-			String last_name = scan.nextLine();
+			String first_name = scan.next();
+			String last_name = scan.next();
 			int items = scan.nextInt();
 				for (int a=0; a<items; a++) {
 					int quantity = scan.nextInt();
-					String order_name = scan.nextLine();
-					double price = scan.nextInt();
+					String order_name = scan.next();
+					double price = scan.nextDouble();
 					total += quantity*price;
 				}
 			System.out.println(first_name.charAt(0) + ". " + last_name + ": " + df.format(total) );
