@@ -36,10 +36,10 @@ public class A1Jedi {
 				String item_name = scan.next();
 				ar.add(item_name);
 				hash.put(item_name, hash.get(item_name)+1);
-				for (int i =0; i<ar.size(); i++) {
+				for (int i =0; i<ar.size()-1; i++) {
 					if (item_name == ar.get(i)) {
-						hash.put(item_name, 1);
-					}
+						hash.put(item_name, hash.get(item_name)-1);
+					};
 				}
 				hs.put(item_name, hs.get(item_name)+quantity);
 				System.out.println("------------------");
