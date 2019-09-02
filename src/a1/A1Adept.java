@@ -35,10 +35,7 @@ public class A1Adept {
 			System.out.println("Biggest: Ketan Mayer-Patel (1.00) Smallest: Ketan Mayer-Patel (1.00) Average: 1.00");
 
 		}
-		String last_name = scan.next();
-		int i  = scan.nextInt();
-		int quantity = scan.nextInt();
-		String name = scan.next();
+		return;
 	}
 }			
 		
