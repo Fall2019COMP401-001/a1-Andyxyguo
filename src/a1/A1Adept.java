@@ -53,7 +53,7 @@ public class A1Adept {
 			System.out.println("Average: " + df.format(average));
 		} 
 		else {
-			double average = calculateValueSum(array)/(array.size()-1);
+			double average = calculateValueSum(array)/(array.size());
 			System.out.println("Average: " + average);
 		}
 	}
