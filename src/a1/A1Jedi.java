@@ -41,6 +41,7 @@ public class A1Jedi {
 						hash.put(item_name, hash.get(item_name)-1);
 					}
 				}
+				System.out.println(ar);
 				hs.put(item_name, hs.get(item_name)+quantity);
 			}
 		}
