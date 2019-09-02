@@ -13,7 +13,8 @@ public class A1Novice {
 		int customers = scan.nextInt();
 		
 		for (int i=0; i<customers; i++) {
-			double total = 0.00;
+			double total = 0;
+			DecimalFormat df = new DecimalFormat("0.00");
 			String first_name = scan.next();
 			String last_name = scan.next();
 			int items = scan.nextInt();
@@ -23,7 +24,7 @@ public class A1Novice {
 					double price = scan.nextDouble();
 					total += quantity*price;
 				}
-			System.out.println(first_name.charAt(0) + ". " + last_name + ": " + total );
+			System.out.println(first_name.charAt(0) + ". " + last_name + ": " + df.format(total) );
 		}
 		
 	}
