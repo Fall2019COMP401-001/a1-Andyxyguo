@@ -37,8 +37,10 @@ public class A1Jedi {
 				String item_name = scan.next();
 				buy.put(item_name, true);
 				hs.put(item_name, hs.get(item_name)+quantity);
+				System.out.println(buy);
 			}
 			for (int i =0; i<al.size(); i++) {
+				System.out.println(buy);
 				if (buy.get(al.get(i))==true) {
 					hash.put(al.get(i), hash.get(al.get(i))+1);
 				}
