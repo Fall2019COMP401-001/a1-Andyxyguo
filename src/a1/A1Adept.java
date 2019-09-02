@@ -40,7 +40,7 @@ public class A1Adept {
 						array[i] = quantity*(hash.get(item_name));
 					}
 				}
-				hs.put(quantity*hash.get(item_name), first_name +last_name);
+				hs.put(quantity*hash.get(item_name), first_name +""+last_name);
 			}
 		}
 		double max = findValueMax(array);
