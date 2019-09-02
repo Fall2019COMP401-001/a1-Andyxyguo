@@ -32,14 +32,9 @@ public class A1Adept {
 			for (int h=0; h<order; h++ ) {
 				double quantity = scan.nextDouble();
 				String item_name = scan.next();
-				if (array[0] == 0) {
-					array[0] = quantity*(hash.get(item_name));
-				}
-				else {
-					for (int i = 0; i<array.length; i++) {
-						double value = quantity*(hash.get(item_name));
-						array[i+1] = value;
-					}
+				for (int i = 0; i<array.length; i++) {
+					double value = quantity*(hash.get(item_name));
+					array[i] = value;
 				}
 				hs.put(quantity*hash.get(item_name), first_name +" "+last_name);
 			}
