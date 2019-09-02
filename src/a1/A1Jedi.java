@@ -16,6 +16,7 @@ public class A1Jedi {
 		DecimalFormat df = new DecimalFormat("0.00");
 		Hashtable<String, Integer> hash = new Hashtable<String, Integer>();
 		Hashtable<String, Integer> hs = new Hashtable<String, Integer>();
+		Hashtable<String, Boolean> buy = new Hashtable<String, Boolean>();
 		ArrayList<String> al = new ArrayList<String>();
 		for (int i = 0; i < count; i++) {
 			String item_name = scan.next();
@@ -23,6 +24,7 @@ public class A1Jedi {
 			al.add(item_name);
 			hash.put(item_name, 0);
 			hs.put(item_name, 0);
+			buy.put(item_name, false);
 		}
 		
 		int customers = scan.nextInt();
@@ -30,21 +32,13 @@ public class A1Jedi {
 			String first_name = scan.next();
 			String last_name = scan.next();
 			int order = scan.nextInt();
-			ArrayList<String> ar = new ArrayList<String>();
 			for (int h=0; h<order; h++ ) {
 				int quantity = scan.nextInt();
 				String item_name = scan.next();
-				ar.add(item_name);
-				for (int i =0; i<al.size()-1; i++) {
-					if (item_name == ar.get(i)) {
-						hash.put(item_name, hash.get(item_name)-1);
-					}
-					System.out.println(hash);
-				}
-				hash.put(item_name, hash.get(item_name)+1);	
-				System.out.println(ar);
+				buy.put(item_name, true);
 				hs.put(item_name, hs.get(item_name)+quantity);
 			}
+			System.out.println(buy);
 		}
 
 		for (int i = 0; i < hash.size(); i++) {
