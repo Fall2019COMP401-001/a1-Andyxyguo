@@ -25,7 +25,6 @@ public class A1Adept {
 		}
 		
 		int customers = scan.nextInt();
-		double value = 0;
 		for (int a = 0; a< customers; a++) {
 			String first_name = scan.next();
 			String last_name = scan.next();
@@ -37,9 +36,8 @@ public class A1Adept {
 					array[0] = quantity*(hash.get(item_name));
 				}
 				else {
-					for (int i = 0; i<=array.length+1; i++) {
-						value = hash.get(item_name);
-						array[i] = quantity*value;
+					for (int i = 1; i<=array.length+1; i++) {
+						array[i] = quantity*(hash.get(item_name));
 					}
 				}
 				hs.put(quantity*hash.get(item_name), first_name +last_name);
@@ -51,7 +49,7 @@ public class A1Adept {
 		System.out.println("Smallest: " + hs.get(min) + " (" + df.format(min) + ")");
 		if (array.length == 1) {
 			double average = calculateValueSum(array);
-			System.out.println("Average: " + "( " + df.format(average) + ")");
+			System.out.println("Average: " + df.format(average));
 		} 
 		else {
 			double average = calculateValueSum(array)/(array.length-1);
