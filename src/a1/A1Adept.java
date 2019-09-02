@@ -15,7 +15,7 @@ public class A1Adept {
 			hash = new Hashtable<String, Double>();
 		Hashtable<Double, String>
 			hs = new Hashtable<Double, String>();
-		double[] array = {};
+		double[] array = {0};
 		for (int i = 0; i < count; i++) {
 			String item_name = scan.next();
 			double price = scan.nextDouble();
@@ -30,7 +30,7 @@ public class A1Adept {
 			for (int h=0; h<order; h++ ) {
 				int quantity = scan.nextInt();
 				String item_name = scan.next();
-				for (int i = 0; i<= array.length; i++) {
+				for (int i = 0; i< array.length; i++) {
 					array[array.length] = quantity*hash.get(item_name);
 				}
 				hs.put(quantity*hash.get(item_name), first_name +last_name);
@@ -41,8 +41,7 @@ public class A1Adept {
 		double min = findValueMin(array);
 		System.out.println("Smallest: " + hs.get(min) + " (" + min + ")");
 		double average = calculateValueSum(array)/(array.length-1);
-		System.out.println("Average: " + average);
-	}
+		System.out.println("Average: " + average);}
 
 	static double calculateValueSum(double[] vals) {
 		
