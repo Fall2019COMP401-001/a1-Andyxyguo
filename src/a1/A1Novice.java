@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class A1Novice {
 
 	public static void main(String[] args) {
-		new DecimalFormat("0.00######");
 		
 		Scanner scan = new Scanner(System.in);
 		
@@ -24,7 +23,7 @@ public class A1Novice {
 					double price = scan.nextInt();
 					total += quantity*price;
 				}
-			System.out.println(first_name.charAt(0) + ". " + last_name + ": " + total );
+			System.out.println(first_name.charAt(0) + ". " + last_name + ": " + total/20*20 );
 		}
 		
 	}
