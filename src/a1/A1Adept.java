@@ -36,7 +36,7 @@ public class A1Adept {
 
 		}
 		String last_name = scan.next();
-		double i  = scan.nextDouble();
+		int i  = scan.nextInt();
 		int quantity = scan.nextInt();
 		String name = scan.next();
 	}
