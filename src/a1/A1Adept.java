@@ -30,7 +30,7 @@ public class A1Adept {
 			for (int h=0; h<order; h++ ) {
 				int quantity = scan.nextInt();
 				String item_name = scan.next();
-				for (int i = 0; i<array.length-1; i++) {
+				for (int i = 0; i<array.length+1; i++) {
 					array[i] = quantity*hash.get(item_name);
 				}
 				hs.put(quantity*hash.get(item_name), first_name +last_name);
