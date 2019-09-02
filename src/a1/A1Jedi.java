@@ -35,13 +35,13 @@ public class A1Jedi {
 				int quantity = scan.nextInt();
 				String item_name = scan.next();
 				ar.add(item_name);
-				for (int i =0; i<ar.size()-1; i++) {
+				for (int i =0; i<al.size()-1; i++) {
 					if (item_name == ar.get(i)) {
 						hash.put(item_name, hash.get(item_name)-1);
 					}
 					System.out.println(hash);
 				}
-				hash.put(item_name, hash.get(item_name)+1);
+				hash.put(item_name, hash.get(item_name)+1);	
 				System.out.println(ar);
 				hs.put(item_name, hs.get(item_name)+quantity);
 			}
