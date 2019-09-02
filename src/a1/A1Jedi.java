@@ -40,6 +40,7 @@ public class A1Jedi {
 					if (item_name == ar.get(i)) {
 						hash.put(item_name, hash.get(item_name)-1);
 					}
+					System.out.println(hash);
 				}
 				System.out.println(ar);
 				hs.put(item_name, hs.get(item_name)+quantity);
