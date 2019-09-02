@@ -24,7 +24,7 @@ public class A1Adept {
 		}
 		
 
-		
+
 		int customers = scan.nextInt();
 		for (int a = 0; a< customers; a++) {
 			double total =0;
@@ -46,14 +46,8 @@ public class A1Adept {
 		System.out.println("Biggest: " + hs.get(max) + " (" + df.format(max) + ")");
 		double min = findValueMin(array);
 		System.out.println("Smallest: " + hs.get(min) + " (" + df.format(min) + ")");
-		if (array.size() == 1) {
-			double average = calculateValueSum(array);
-			System.out.println("Average: " + df.format(average));
-		} 
-		else {
-			double average = calculateValueSum(array)/(array.size());
-			System.out.println("Average: " + df.format(average));
-		}
+		double average = calculateValueSum(array)/(array.size());
+		System.out.println("Average: " + df.format(average));
 	}
 
 	static double calculateValueSum(ArrayList<Double> vals) {
