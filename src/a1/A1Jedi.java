@@ -38,10 +38,16 @@ public class A1Jedi {
 				hash.put(item_name, hash.get(item_name)+1);
 				for (int i =0; i<ar.size(); i++) {
 					if (item_name == ar.get(i)) {
-						hash.put(item_name, hash.get(item_name)-1);
+						hash.put(item_name, 1);
 					}
 				}
 				hs.put(item_name, hs.get(item_name)+quantity);
+				System.out.println("------------------");
+				System.out.println(item_name);
+				System.out.println("------------------");
+				System.out.println(hash.get(item_name));
+				System.out.println("------------------");
+				System.out.println(hs.get(item_name));
 			}
 		}
 
