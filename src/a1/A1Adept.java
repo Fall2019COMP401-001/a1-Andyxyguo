@@ -28,15 +28,17 @@ public class A1Adept {
 		
 		int customers = scan.nextInt();
 		for (int a = 0; a< customers; a++) {
+			double total =0;
 			String first_name = scan.next();
 			String last_name = scan.next();
 			int order = scan.nextInt();
 			for (int h=0; h<order; h++ ) {
 				double quantity = scan.nextDouble();
 				String item_name = scan.next();
-				array.add(quantity*hash.get(item_name));
-				hs.put(quantity*hash.get(item_name), first_name +" "+last_name);
+				total += quantity*hash.get(item_name);
 			}
+			array.add(total);
+			hs.put(total, first_name +" "+last_name);
 		}
 		System.out.println("..........................");
 		System.out.println(hs);
