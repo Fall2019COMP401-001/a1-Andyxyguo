@@ -35,7 +35,6 @@ public class A1Adept {
 			System.out.println("Biggest: Ketan Mayer-Patel (1.00) Smallest: Ketan Mayer-Patel (1.00) Average: 1.00");
 
 		}
-		return;
 	}
 }			
 		
