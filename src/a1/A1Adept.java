@@ -22,6 +22,9 @@ public class A1Adept {
 			double price = scan.nextDouble();
 			hash.put(item_name, price);
 		}
+		System.out.println("..........................");
+		System.out.println(hash);
+		System.out.println("..........................");
 		
 		int customers = scan.nextInt();
 		for (int a = 0; a< customers; a++) {
@@ -35,6 +38,7 @@ public class A1Adept {
 				hs.put(quantity*hash.get(item_name), first_name +" "+last_name);
 			}
 		}
+
 		double max = findValueMax(array);
 		System.out.println("Biggest: " + hs.get(max) + " (" + df.format(max) + ")");
 		double min = findValueMin(array);
