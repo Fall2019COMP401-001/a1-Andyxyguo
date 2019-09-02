@@ -31,11 +31,11 @@ public class A1Adept {
 				int quantity = scan.nextInt();
 				String item_name = scan.next();
 				if (array[0] == 0) {
-					array[0] = quantity*hash.get(item_name);
+					array[0] = quantity*(hash.get(item_name));
 				}
 				else {
 					for (int i = 0; i<=array.length+1; i++) {
-						array[i] = quantity*hash.get(item_name);
+						array[i] = quantity*(hash.get(item_name));
 					}
 				}
 				hs.put(quantity*hash.get(item_name), first_name +last_name);
