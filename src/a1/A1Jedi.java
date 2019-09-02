@@ -30,10 +30,17 @@ public class A1Jedi {
 			String first_name = scan.next();
 			String last_name = scan.next();
 			int order = scan.nextInt();
+			ArrayList<String> ar = new ArrayList<String>();
 			for (int h=0; h<order; h++ ) {
 				int quantity = scan.nextInt();
 				String item_name = scan.next();
+				ar.add(item_name);
 				hash.put(item_name, hash.get(item_name)+1);
+				for (int i =0; i<ar.size(); i++) {
+					if (item_name == ar.get(i)) {
+						hash.put(item_name, hash.get(item_name)-1);
+					}
+				}
 				hs.put(item_name, hs.get(item_name)+quantity);
 			}
 		}
@@ -43,7 +50,7 @@ public class A1Jedi {
 				System.out.println("No customers bought " + al.get(i));
 			}	
 			else {
-				System.out.println(hash.get(al.get(i)) + "customers bought" + hs.get(al.get(i)) + al.get(i));
+				System.out.println(hash.get(al.get(i)) + "customers bought " + hs.get(al.get(i)) + al.get(i));
 			}
 		}
 	}
