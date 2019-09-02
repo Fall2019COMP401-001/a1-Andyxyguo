@@ -1,5 +1,6 @@
 package a1;
 
+import java.text.DecimalFormat;
 import java.util.Hashtable;
 import java.util.Scanner;
 
@@ -11,6 +12,7 @@ public class A1Adept {
 
 		// Your code follows here.
 		int count = scan.nextInt();
+		DecimalFormat df = new DecimalFormat("0.00");
 		Hashtable<String, Double>
 			hash = new Hashtable<String, Double>();
 		Hashtable<Double, String>
@@ -42,12 +44,18 @@ public class A1Adept {
 			}
 		}
 		double max = findValueMax(array);
-		System.out.println("Biggest: " + hs.get(max) + " (" + max + ")");
+		System.out.println("Biggest: " + hs.get(max) + " (" + df.format(max) + ")");
 		double min = findValueMin(array);
-		System.out.println("Smallest: " + hs.get(min) + " (" + min + ")");
-		double average = calculateValueSum(array)/(array.length-1);
-		System.out.println("Average: " + average);}
-
+		System.out.println("Smallest: " + hs.get(min) + " (" + df.format(min) + ")");
+		if (array.length == 1) {
+			double average = calculateValueSum(array);
+			System.out.println("Average: " + average);
+		} 
+		else {
+			double average = calculateValueSum(array)/(array.length-1);
+			System.out.println("Average: " + average);
+		}
+	}
 	static double calculateValueSum(double[] vals) {
 		
 		double sum = 0;
