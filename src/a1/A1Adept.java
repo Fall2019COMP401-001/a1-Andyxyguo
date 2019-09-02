@@ -17,7 +17,7 @@ public class A1Adept {
 			hash = new Hashtable<String, Double>();
 		Hashtable<Double, String>
 			hs = new Hashtable<Double, String>();
-		double[] array = {0};
+		double[] array = {};
 		for (int i = 0; i < count; i++) {
 			String item_name = scan.next();
 			double price = scan.nextDouble();
