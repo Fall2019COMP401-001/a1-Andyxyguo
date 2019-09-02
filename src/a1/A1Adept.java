@@ -38,6 +38,9 @@ public class A1Adept {
 				hs.put(quantity*hash.get(item_name), first_name +" "+last_name);
 			}
 		}
+		System.out.println("..........................");
+		System.out.println(hs);
+		System.out.println("..........................");
 
 		double max = findValueMax(array);
 		System.out.println("Biggest: " + hs.get(max) + " (" + df.format(max) + ")");
