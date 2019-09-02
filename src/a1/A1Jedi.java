@@ -50,8 +50,8 @@ public class A1Jedi {
 				System.out.println("No customers bought " + al.get(i));
 			}	
 			else {
-				System.out.println(hash.get(al.get(i)) + " customers bought " + hs.get(al.get(i)) + al.get(i));
+				System.out.println(hash.get(al.get(i)) + " customers bought " + hs.get(al.get(i)) + " " + al.get(i));
 			}
 		}
-	};
+	}
 }
