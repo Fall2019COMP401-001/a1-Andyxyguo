@@ -22,9 +22,8 @@ public class A1Adept {
 			double price = scan.nextDouble();
 			hash.put(item_name, price);
 		}
-		System.out.println("..........................");
-		System.out.println(hash);
-		System.out.println("..........................");
+		
+
 		
 		int customers = scan.nextInt();
 		for (int a = 0; a< customers; a++) {
@@ -40,9 +39,8 @@ public class A1Adept {
 			array.add(total);
 			hs.put(total, first_name +" "+last_name);
 		}
-		System.out.println("..........................");
-		System.out.println(hs);
-		System.out.println("..........................");
+
+
 
 		double max = findValueMax(array);
 		System.out.println("Biggest: " + hs.get(max) + " (" + df.format(max) + ")");
@@ -54,7 +52,7 @@ public class A1Adept {
 		} 
 		else {
 			double average = calculateValueSum(array)/(array.size());
-			System.out.println("Average: " + average);
+			System.out.println("Average: " + df.format(average));
 		}
 	}
 
