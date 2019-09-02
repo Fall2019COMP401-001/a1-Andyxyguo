@@ -36,11 +36,11 @@ public class A1Adept {
 					array[0] = quantity*(hash.get(item_name));
 				}
 				else {
-					for (int i = 1; i<=array.length+1; i++) {
+					for (int i = 1; i<=array.length; i++) {
 						array[i] = quantity*(hash.get(item_name));
 					}
 				}
-				hs.put(quantity*hash.get(item_name), first_name +""+last_name);
+				hs.put(quantity*hash.get(item_name), first_name +" "+last_name);
 			}
 		}
 		double max = findValueMax(array);
