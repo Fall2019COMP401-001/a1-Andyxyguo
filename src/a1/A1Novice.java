@@ -23,7 +23,7 @@ public class A1Novice {
 					double price = scan.nextDouble();
 					total += quantity*price;
 				}
-			System.out.println(first_name.charAt(0) + ". " + last_name + ": " + df.format(total) );
+			System.out.println(first_name.charAt(0) + ". " + last_name + ": " + total );
 		}
 		
 	}
