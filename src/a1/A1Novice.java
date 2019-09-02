@@ -11,6 +11,7 @@ public class A1Novice {
 		
 		// Your code follows here.
 		int customers = scan.nextInt();
+		scan.nextLine();
 		
 		for (int i=0; i<customers; i++) {
 			double total = 0;
@@ -20,8 +21,10 @@ public class A1Novice {
 			int items = scan.nextInt();
 				for (int a=0; a<items; a++) {
 					int quantity = scan.nextInt();
+					scan.nextLine();
 					String order_name = scan.next();
 					double price = scan.nextInt();
+					scan.nextLine();
 					total += quantity*price;
 				}
 			System.out.println(first_name.charAt(0) + ". " + last_name + ": " + df.format(total) );
